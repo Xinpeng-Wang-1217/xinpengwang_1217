@@ -39,10 +39,15 @@ export const menuLinks: { path: string; title: string }[] = [
 		path: "/posts/",
 		title: "Blog",
 	},
-	{
-		path: "/notes/",
-		title: "Notes",
-	},
+	// {
+	// 	path: "/notes/",
+	// 	title: "Notes",
+	// },
+	  // Add the CV link here
+	  {
+		title: "My CV",
+		path: "/cv", // This path should match the path of your CV page
+	  },
 ];
 
 // https://expressive-code.com/reference/configuration/

@@ -1,0 +1,16 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+const meta = {
+	description: "I'm a Ph.D student in Cosmology",
+	title: "About",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="mb-4 text-2xl font-bold">Curriculum Vitae</h1>
+	<p>
+		<a href={"/public/cv.pdf"} target="_blank" class="text-white-600 underline">Download CV (PDF)</a
+		>
+	</p>
+	<iframe src={"/public/cv.pdf"} class="h-screen w-full" title="CV" frameborder="0"></iframe>
+</PageLayout>
