@@ -12,16 +12,23 @@ const socialLinks: {
 	link: string;
 	name: string;
 }[] = [ 
+/** 
 	{
 		friendlyName: "Github",
 		link: "https://github.com/chrismwilliams/astro-cactus",
+		name: "mdi:github",
+	},
+*/
+	{
+		friendlyName: "InspireHep",
+		link: "https://inspirehep.net/authors/2157310?ui-citation-summary=true&ui-exclude-self-citations=true",
 		name: "mdi:github",
 	},
 ];
 ---
 
 <div class="flex flex-wrap items-end gap-x-2">
-	<p>Find me on</p>
+	<p>Find my publications on</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
 			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
