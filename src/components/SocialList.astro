@@ -11,8 +11,9 @@ const socialLinks: {
 	isWebmention?: boolean;
 	link: string;
 	name: string;
-}[] = [ 
-/** 
+}[] = [
+	/** 
+>>>>>>> 49f87a8 (Updated website with latest changes)
 	{
 		friendlyName: "Github",
 		link: "https://github.com/chrismwilliams/astro-cactus",
@@ -24,14 +25,26 @@ const socialLinks: {
 		link: "https://inspirehep.net/authors/2157310?ui-citation-summary=true&ui-exclude-self-citations=true",
 		name: "mdi:alpha-i-box",
 	},
-/** 
-  {
-		friendlyName: "Email",
-		link: "wangxp0.0@gmail.com",
-		name: "mdi:email-box",
-	};
-*/
+];
 
+const emailLink: {
+	friendlyName: string;
+	isWebmention?: boolean;
+	link: string;
+	name: string;
+}[] = [
+	/** 
+	{
+		friendlyName: "Github",
+		link: "https://github.com/chrismwilliams/astro-cactus",
+		name: "mdi:github",
+	},
+*/
+	{
+		friendlyName: "wangxp0.0@gmail.com",
+		link: "mailto:wangxp0.0@gmail.com",
+		name: "mdi:email-box",
+	},
 ];
 ---
 
@@ -53,10 +66,12 @@ const socialLinks: {
 				</li>
 			))
 		}
-  <p>Contact me through</p>
+	</ul>
+
+	<p>Email me through</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
-			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
+			emailLink.map(({ friendlyName, isWebmention, link, name }) => (
 				<li class="flex">
 					<a
 						class="hover:text-link inline-block"

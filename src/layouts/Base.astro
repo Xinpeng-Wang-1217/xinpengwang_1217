@@ -19,7 +19,24 @@ const {
 <html class="scroll-smooth" lang={siteConfig.lang}>
 	<head>
 		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" defer client:load
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+			defer
+			client:load
+			onload="renderMathInElement(document.body, {
+			delimiters: [
+			  { left: '$$', right: '$$', display: true },
+			  { left: '$', right: '$', display: false }
+			]
+		  });"
+		></script>
 	</head>
+	<!-- <BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
+		
+	</head> -->
 	<body
 		class="bg-global-bg text-global-text mx-auto flex min-h-screen max-w-3xl flex-col px-4 pt-16 font-mono text-sm font-normal antialiased sm:px-8"
 	>
